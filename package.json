@@ -1,0 +1,19 @@
+{
+  "name": "viennajs-predictionio-20140430",
+  "version": "0.0.0",
+  "description": "Machine Learning with Node.js and Prediction.io ===============================================",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.1.1",
+    "predictionio-client": "~1.0.0",
+    "hogan.js": "~2.0.0",
+    "hogan-express": "~0.5.2",
+    "body-parser": "~1.0.2",
+    "method-override": "~1.0.0"
+  }
+}

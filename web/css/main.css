@@ -1,0 +1,72 @@
+body,
+input,
+textarea,
+button {
+    color: #333;
+    font: 1.4em 'Helvetica Neue', Helvetica;
+}
+
+h1 {
+    border-bottom: 5px solid #999;
+}
+
+h2 {
+    margin: 0.83em 0 0.4em;
+    border-bottom: 2px solid #999;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+}
+input:focus {
+    border: 1px solid #333;
+    outline: 0;
+}
+
+input#username {
+    width: 678px;
+}
+input.show {
+    width: 638px;
+}
+
+p {
+    line-height: 150%;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.notification {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.notification.success {
+    background: #c5ffbc;
+    border: 1px solid #6dcd60;
+}
+
+.button-field {
+    text-align: center;
+}
+
+#get-button {
+    padding: 20px;
+    border: 5px solid #333;
+    background: #F5D327;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+#recommendations {
+    margin: 20px 0;
+    border: 5px solid #333;
+    background: white;
+    padding: 20px;
+    list-style: none;
+}
