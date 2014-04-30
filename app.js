@@ -7,26 +7,12 @@ var express = require('express'),
     http = require('http');
 
 prediction.config.APP_KEY = 'mKN52XibH4Ja1LnjQTHixw896xy7lBanjVBMsivu45sRItenjR4widGs1XZf0Fzo';
-prediction.config.APP_URL = 'http://localhost:8000' // default
-
-// var views = {};
-
-// function loadView(name) {
-//     fs.readFile(__dirname+'/views/'+name+'.html', function (err, data) {
-//         if (err) {
-//             console.error("Can't load fixtures: ", e);
-//             return;
-//         }
-//         views[name] = hogan.compile(data.toString());
-//     });
-// }
-// loadView('layout');
+prediction.config.APP_URL = 'http://localhost:8000';
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname+'/views');
 app.set('view engine', 'html');
 app.set('layout', 'layout');
-// app.set ('partials', {foo: 'foo'});
 app.enable('view cache');
 app.engine('html', require('hogan-express'));
 app.use(require('body-parser')());
@@ -54,6 +40,7 @@ app.post('/show', function (req, res) {
 app.post('/recommend', function (req, res) {
     var user = req.body.user;
     prediction.engine.recommendedItems('itemrec', user, 5, function (x, data) {
+        console.log(data);
         res.send(data.pio_iids);
     });
 })
